@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscribe to LCCC Events Calendar</title>
+  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" defer></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafc;
+      margin: 0;
+      padding: 2rem;
+      color: #1a1a1a;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    h1 {
+      font-size: 1.75rem;
+      color: #002f6c;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Subscribe to the LCCC Events Calendar</h1>
+    <p>
+      Stay connected with everything happening at Laramie County Community College.
+      Subscribe to the campus events calendar using your preferred calendar app:
+    </p>
+
+    <add-to-calendar-button
+    name="LCCC Campus Events"
+    subscribe
+    icsFile="https://outlook.office365.com/owa/calendar/5a1511384b374ba9b02a744f393fc273@lccc.wy.edu/09272e6029624cb4a1448358837c94f813034023749716230358/calendar.ics"
+    options="'Apple','Google','iCal','Outlook.com','Microsoft365','Yahoo'"
+    inline
+    buttonsList
+  ></add-to-calendar-button>
+
+    <footer>
+      Calendar managed by Laramie County Community College · Office of Student Engagement
+    </footer>
+  </div>
+</body>
+</html>
