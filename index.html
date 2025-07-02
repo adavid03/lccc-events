@@ -6,58 +6,118 @@
   <title>Subscribe to LCCC Events Calendar</title>
   <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" defer></script>
   <style>
+    :root {
+      --lccc-circle-blue: #003278;
+      --lccc-eagle-gold: #ffc001;
+      --lccc-lettering-blue: #076bb6;
+      --bg-gray: #f9f9f9;
+      --text-dark: #1a1a1a;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9fafc;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-gray);
+      color: var(--text-dark);
       padding: 2rem;
-      color: #1a1a1a;
     }
-    .container {
-      max-width: 700px;
+
+    .wrapper {
+      max-width: 800px;
       margin: auto;
-      background: #ffffff;
-      padding: 2rem;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
     }
-    h1 {
-      font-size: 1.75rem;
-      color: #002f6c;
-      margin-bottom: 0.5rem;
+
+    header {
+      background-color: var(--lccc-circle-blue);
+      color: white;
+      padding: 1.5rem;
+      border-bottom: 4px solid var(--lccc-eagle-gold);
     }
-    p {
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: white;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    main p {
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #333;
     }
+
     footer {
-      margin-top: 2rem;
       font-size: 0.9rem;
-      color: #888;
       text-align: center;
+      color: #666;
+      padding: 1rem;
+      border-top: 1px solid #eee;
     }
+
+    footer a {
+      color: var(--lccc-lettering-blue);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Subscribe to the LCCC Events Calendar</h1>
-    <p>
-      Stay connected with everything happening at Laramie County Community College.
-      Subscribe to the campus events calendar using your preferred calendar app:
-    </p>
+  <div class="wrapper">
+    <header>
+      <h1>Subscribe to the LCCC Events Calendar</h1>
+    </header>
+    <main>
+      <p>
+        Stay in the loop with everything happening on campus. Subscribe to the official Laramie County Community College events calendar and get automatic updates in your favorite calendar app.
+      </p>
 
-    <add-to-calendar-button
-    name="LCCC Campus Events"
-    subscribe
-    icsFile="https://outlook.office365.com/owa/calendar/5a1511384b374ba9b02a744f393fc273@lccc.wy.edu/09272e6029624cb4a1448358837c94f813034023749716230358/calendar.ics"
-    options="'Apple','Google','iCal','Outlook.com','Microsoft365','Yahoo'"
-    inline
-    buttonsList
-  ></add-to-calendar-button>
+<add-to-calendar-button
+  name="LCCC Campus Events"
+  subscribe
+  icsFile="https://outlook.office365.com/owa/calendar/5a1511384b374ba9b02a744f393fc273@lccc.wy.edu/09272e6029624cb4a1448358837c94f813034023749716230358/calendar.ics"
+  options="'Apple','Google','Outlook.com','iCal'"
+  subscribe
+  buttonStyle="simple"
+  buttonsList
+  layout="columns-3"
+  lightMode="light"
+  styleLight="
+    --btn-background: #ffc001;
+    --btn-text: #003278;
+    --btn-border-radius: 6px;
+    --btn-font-size: 15px;
+    --btn-hover-background: #e6ae00;
+    --btn-hover-text: #003278;
+    --button-list-grid-gap: 0.75rem;
+  "
+  styleDark="
+    --btn-background: #ffc001;
+    --btn-text: #003278;
+    --btn-border-radius: 6px;
+    --btn-font-size: 15px;
+    --btn-hover-background: #e6ae00;
+    --btn-hover-text: #003278;
+    --button-list-grid-gap: 0.75rem;
+  "
+></add-to-calendar-button>
 
+
+
+    </main>
     <footer>
-      Calendar managed by Laramie County Community College · Office of Student Engagement
+      Managed by <a href="https://www.lccc.wy.edu/life/campusInvolvement.aspx" target="_blank" rel="noopener">LCCC Student Life</a>
     </footer>
   </div>
 </body>
